@@ -6,7 +6,7 @@ If you need authentication support, you're on your own (it can be secured using 
 ![screenshot](https://github.com/ChaseHall/homer/blob/master/screenshot.png)
 
 **How to build / install it? Where is the webpack config?**
-There is no build system (😱), use it like that! It'meant to be stupid simple & zero maintenance required. just copy the static files somewhere, and visit the `index.html`.
+There is no build system (😱), use it like that! It's meant to be stupid simple & zero maintenance required. just copy the static files somewhere, and visit the `index.html`.
 
 
 ## configuration
@@ -16,72 +16,39 @@ Title, icons, links, colors, and services can be configured in the `config.yml` 
 
 ```yaml
 ---
-# Homepage configuration
-# See https://fontawesome.com/icons for icons options
-
-title: "Simple homepage"
-subtitle: "Homer"
-logo: "assets/homer.png"
-# Alternatively a fa icon can be provided:
-# icon: "fas fa-skull-crossbones"
-
-# Optional message
-message:
-  style: "is-warning"
-  title: "Optional message!"
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula."
-
-# Optional navbar
-links:
-  - name: "ansible"
-    icon: "fa-github"
-    url: "https://github.com/xxxxx/ansible/"
-  - name: "Wiki"
-    icon: "fa-book"
-    url: "https://wiki.xxxxxx.com/"
-
 # Services
 # First level array represent a group.
 # Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
 services:
-  - name: "DevOps"
-    icon: "fa-code-fork"
+  - name: "Services"
+    icon: []
     items:
-      - name: "Jenkins"
-        logo: "/assets/tools/jenkins.png"
-        # Alternatively a fa icon can be provided:
-        # icon: "fab fa-jenkins"
-        subtitle: "Continuous integration server"
-        tag: "CI"
-        url: "#"
-      - name: "RabbitMQ Management"
-        logo: "/assets/tools/rabbitmq.png"
-        subtitle: "Manage & monitor RabbitMQ server"
-        tag: "haproxy"
-        # Optional tagstyle
-        tagstyle: "is-success"
-        url: "#"
-  - name: "Monitoring"
-    icon: "fa-heartbeat"
+      - name: "qBittorrent"
+        logo: "assets/tools/qbit.png"
+        subtitle: "Admin UI for Torrents"
+        tag: ""
+        url: "http://127.0.0.1:8080"
+  - name: "Plex"
+    icon: []
     items:
-      - name: "M/Monit"
-        logo: "/assets/tools/monit.png"
-        subtitle: "Monitor & manage all monit enabled hosts"
-        tag: "monit"
-        url: "#"
-      - name: "Grafana"
-        logo: "/assets/tools/grafana.png"
-        subtitle: "Metric analytics & dashboards"
-        url: "#"
-      - name: "Kibana"
-        logo: "/assets/tools/elastic.png"
-        subtitle: "Explore & visualize logs"
-        tag: "elk"
-        url: "#"
-      - name: "Website monitoring"
-        logo: "/assets/tools/pingdom.png"
-        subtitle: "Pingdom public reports overview"
-        tag: "CI"
-        url: "#"
-
+      - name: "Plex"
+        logo: "assets/tools/plex.png"
+        subtitle: "Plex Media Server Frontend"
+        tag: ""
+        url: "http://127.0.0.1:32400/web/index.html"
+      - name: "Sonarr"
+        logo: "assets/tools/sonarr.jpg"
+        subtitle: "Automatically download TV Shows for Plex"
+        tag: ""
+        url: "http://localhost:8989/"
+      - name: "Radarr"
+        logo: "assets/tools/radarr.png"
+        subtitle: "Automatically download Movies for Plex"
+        tag: ""
+        url: "http://localhost:7878/"
+      - name: "Jackett"
+        logo: "assets/tools/jackett.png"
+        subtitle: "Manage trackers for Sonarr + Radarr"
+        tag: ""
+        url: "http://localhost:9117/"
 ```
