@@ -2,66 +2,62 @@
 # Homepage configuration
 # See https://fontawesome.com/icons for icons options
 
-title: "Simple homepage"
-subtitle: "Homer"
-logo: "assets/logo.png"
-icon: "fas fa-skull-crossbones"
+# title: "Homer"
+# subtitle: ""
+# logo: "assets/logo.png"
+# icon: ""
 
 # Optional message
 # See https://bulma.io/documentation/components/message/#colors for styling options.
-message:
-  style: "is-warning"
-  title: "Optional message!"
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula."
+# message:
+#   style: "is-warning"
+#   title: "Optional message!"
+#   content: "Lorem ipsum dolor sit amet."
 
-# Optional navbar
-links:
-  - name: "ansible"
-    icon: "fab fa-github"
-    url: "https://github.com/xxxxx/ansible/"
-  - name: "Wiki"
-    icon: "fas fa-book"
-    url: "https://wiki.xxxxxx.com/"
+# # Optional navbar
+# links:
+#   - name: "Email"
+#     icon: []
+#     url: "mailto:ch@chasehall.net"
+#   - name: "Snapchat"
+#     icon: []
+#     url: "https://snapchat.com/add/chaser780"
+#   - name: "GitHub"
+#     icon: []
+#     url: "https://github.com/ChaseHall"
 
 # Services
 # First level array represent a group.
 # Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
 services:
-  - name: "DevOps"
-    icon: "fas fa-code-branch"
+  - name: "Services"
+    icon: []
     items:
-      - name: "Jenkins"
-        logo: "/assets/tools/jenkins.png"
-        subtitle: "Continuous integration server"
-        tag: "CI"
-        url: "#"
-      - name: "RabbitMQ Management"
-        logo: "/assets/tools/rabbitmq.png"
-        subtitle: "Manage & monitor RabbitMQ server"
-        tag: "haproxy"
-        # Optional tagstyle
-        # Same styling options as the optional message.
-        tagstyle: "is-success"
-        url: "#"
-  - name: "Monitoring"
-    icon: "fas fa-heartbeat"
+      - name: "qBittorrent"
+        logo: "assets/tools/qbit.png"
+        subtitle: "Admin UI for Torrents"
+        tag: ""
+        url: "http://127.0.0.1:8080"
+  - name: "Plex"
+    icon: []
     items:
-      - name: "M/Monit"
-        logo: "/assets/tools/monit.png"
-        subtitle: "Monitor & manage all monit enabled hosts"
-        tag: "monit"
-        url: "#"
-      - name: "Grafana"
-        logo: "/assets/tools/grafana.png"
-        subtitle: "Metric analytics & dashboards"
-        url: "#"
-      - name: "Kibana"
-        logo: "/assets/tools/elastic.png"
-        subtitle: "Explore & visualize logs"
-        tag: "elk"
-        url: "#"
-      - name: "Website monitoring"
-        logo: "/assets/tools/pingdom.png"
-        subtitle: "Pingdom public reports overview"
-        tag: "CI"
-        url: "#"
+      - name: "Plex"
+        logo: "assets/tools/plex.png"
+        subtitle: "Plex Media Server Frontend"
+        tag: ""
+        url: "http://127.0.0.1:32400/web/index.html"
+      - name: "Sonarr"
+        logo: "assets/tools/sonarr.jpg"
+        subtitle: "Automatically download TV Shows for Plex"
+        tag: ""
+        url: "http://localhost:8989/"
+      - name: "Radarr"
+        logo: "assets/tools/radarr.png"
+        subtitle: "Automatically download Movies for Plex"
+        tag: ""
+        url: "http://localhost:7878/"
+      - name: "Jackett"
+        logo: "assets/tools/jackett.png"
+        subtitle: "Manage trackers for Sonarr + Radarr"
+        tag: ""
+        url: "http://localhost:9117/"

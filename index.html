@@ -1,3 +1,23 @@
+<!--
+
+_____  ______          _____    _______ _    _ _____  _____
+|  __ \|  ____|   /\   |  __ \  |__   __| |  | |_   _|/ ____|
+| |__) | |__     /  \  | |  | |    | |  | |__| | | | | (___
+|  _  /|  __|   / /\ \ | |  | |    | |  |  __  | | |  \___ \
+| | \ \| |____ / ____ \| |__| |    | |  | |  | |_| |_ ____) |
+|_|  \_\______/_/    \_\_____/     |_|  |_|  |_|_____|_____/
+
+
+THIS WAS NOT WRITTEN BY ME. ALL CREDIT TO: https://github.com/bastienwirtz/homer
+
+I just removed everything to make a simple, dark list.
+
+  <3
+      -Chase
+
+ -->
+
+
 <!DOCTYPE html>
 <html>
 
@@ -7,17 +27,17 @@
   <meta name="robots" content="noindex">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <title>Homer</title>
-  <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="/vendors/css/all.css"> -->
+  <link defer rel="stylesheet" href="vendors/bulma.min.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato|Raleway&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
-  <div id="app" v-if="config" :class="[isDark ? 'is-dark' : 'is-light']">
+  <div id="app" v-if="config" :class="[isDark ? 'is-dark' : 'is-dark']">
     <div id="bighead">
-      <section class="first-line">
-        <div v-cloak class="container">
+      <!-- <section class="first-line">
+        <!-- <div v-cloak class="container">
           <div class="logo">
             <img v-if="config.logo" :src="config.logo" />
             <i v-if="config.icon" :class="config.icon"></i>
@@ -27,7 +47,7 @@
             <h1>{{ config.title }}</h1>
           </div>
         </div>
-      </section>
+      </section> -->
       <div v-cloak v-if="config.links" class="container-fluid">
         <nav class="navbar" role="navigation" aria-label="main navigation">
           <div class="container">
@@ -38,19 +58,14 @@
                   {{ link.name }}
                 </a>
               </div>
-              <div class="end">
-                  <a
-                    v-on:click="toggleTheme()"
-                    aria-label="Toggle dark mode"
-                    ><i class="fas fa-adjust"></i>
-                </a>
+              <!-- <div class="end">
                 <a v-on:click="toggleLayout()" class="icon-button navbar-item"><i
-                    :class="['fas', vlayout ? 'fa-list' : 'fa-columns']"></i></a>
+                    :class="['fas', vlayout ? 'fa-columns' : 'fa-list']"></i></a>
                 <div class="search-bar">
                   <label for="search" class="search-label"></label>
                   <input type="text" id="search" v-model="filter" />
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </nav>
@@ -60,8 +75,9 @@
     <section id="main-section" class="section">
       <div v-cloak class="container">
         <div v-if="offline" class="offline-message">
-          <i class="far fa-dizzy"></i>
-          <h1>You're offline bro. <i class="fas fa-redo-alt" v-on:click="checkOffline()"></i></h1>
+          <i class="fa fa-dizzy"></i>
+          <h1 onclick="location.reload()">Error. Please refresh.</h1>
+          <p onclick="location.reload()">Hint: Click this text.</p>
         </div>
         <div v-else>
           <!-- Optional messages -->
@@ -103,19 +119,9 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
-        <div class="container">
-          <div class="content has-text-centered">
-            <p>Created with <span class="has-text-danger">❤️</span> with <a href="https://bulma.io/">bulma</a>, <a
-                href="https://vuejs.org/">vuejs</a>
-              & <a href="https://fontawesome.com/">font awesome</a> // Fork me on <a href="https://github.com/bastienwirtz/homer"><i
-                  class="fab fa-github-alt"></i></a></p>
-          </div>
-        </div>
-      </footer>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+  <script src="vendors/vue.min.js"></script>
   <script src="vendors/js-yaml.min.js"></script>
   <script src="app.js"></script>
 </body>
