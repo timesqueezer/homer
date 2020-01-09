@@ -1,31 +1,4 @@
 ---
-# Homepage configuration
-# See https://fontawesome.com/icons for icons options
-
-# title: "Homer"
-# subtitle: ""
-# logo: "assets/logo.png"
-# icon: ""
-
-# Optional message
-# See https://bulma.io/documentation/components/message/#colors for styling options.
-# message:
-#   style: "is-warning"
-#   title: "Optional message!"
-#   content: "Lorem ipsum dolor sit amet."
-
-# # Optional navbar
-# links:
-#   - name: "Email"
-#     icon: []
-#     url: "mailto:ch@chasehall.net"
-#   - name: "Snapchat"
-#     icon: []
-#     url: "https://snapchat.com/add/chaser780"
-#   - name: "GitHub"
-#     icon: []
-#     url: "https://github.com/ChaseHall"
-
 # Services
 # First level array represent a group.
 # Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
@@ -33,31 +6,56 @@ services:
   - name: "Services"
     icon: []
     items:
+      - name: "Blog"
+        logo: "assets/blog.png"
+        subtitle: "Blog Posts"
+        tag: ""
+        url: "https://chasehall.net"
+      - name: "Mail-in-a-Box"
+        logo: "assets/miab.png"
+        subtitle: "Web-UI for Email"
+        tag: ""
+        url: "https://chasehall.net/mail"
       - name: "qBittorrent"
-        logo: "assets/tools/qbit.png"
-        subtitle: "Admin UI for Torrents"
+        logo: "assets/qbit.png"
+        subtitle: "Web-UI for Torrents"
         tag: ""
         url: "http://127.0.0.1:8080"
   - name: "Plex"
     icon: []
     items:
       - name: "Plex"
-        logo: "assets/tools/plex.png"
+        logo: "assets/plex.png"
         subtitle: "Plex Media Server Frontend"
         tag: ""
-        url: "http://127.0.0.1:32400/web/index.html"
+        url: "https://app.plex.tv/desktop"
+      - name: "Tautulli"
+        logo: "assets/tautulli.png"
+        subtitle: "Monitor Plex + Stats"
+        tag: ""
+        url: "http://127.0.0.1:8181/home"
+      - name: "Ombi"
+        logo: "assets/ombi.png"
+        subtitle: "Request TV & Movies for Plex"
+        tag: ""
+        url: "http://127.0.0.1:5000/"
       - name: "Sonarr"
-        logo: "assets/tools/sonarr.jpg"
+        logo: "assets/sonarr.png"
         subtitle: "Automatically download TV Shows for Plex"
         tag: ""
-        url: "http://localhost:8989/"
+        url: "http://127.0.0.1:8989/"
       - name: "Radarr"
-        logo: "assets/tools/radarr.png"
+        logo: "assets/radarr.png"
         subtitle: "Automatically download Movies for Plex"
         tag: ""
-        url: "http://localhost:7878/"
+        url: "http://127.0.0.1:7878/"
+      - name: "Lidarr"
+        logo: "assets/lidarr.png"
+        subtitle: "Automatically download Music for Plex"
+        tag: ""
+        url: "http://127.0.0.1:8686/"
       - name: "Jackett"
-        logo: "assets/tools/jackett.png"
+        logo: "assets/jackett.png"
         subtitle: "Manage trackers for Sonarr + Radarr"
         tag: ""
-        url: "http://localhost:9117/"
+        url: "http://127.0.0.1:9117/"
